@@ -35,8 +35,9 @@ body {
   font-family: "Courier New", Courier, monospace;
   font-size: 100%;
   min-height: 100vh;
+  background-color: #0f0e0e;
+  color: white;
   font-smooth: always;
-  background-color: white;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -101,6 +102,63 @@ select {
   color: inherit;
 }
 
+.circulos {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  -webkit-filter: blur(40px);
+          filter: blur(40px);
+  -webkit-animation: circulo1 50s linear infinite both;
+          animation: circulo1 50s linear infinite both;
+}
+
+.circulos .circulo {
+  position: absolute;
+  width: 50%;
+  height: 50%;
+  -webkit-animation: circulo1 50s linear infinite both;
+          animation: circulo1 50s linear infinite both;
+}
+
+.circulos .circulo1 {
+  top: 0%;
+  left: 0%;
+}
+
+.circulos .circulo1 .path {
+  fill: rgb(5, 126, 35);
+}
+
+.circulos .circulo2 {
+  top: 0%;
+  right: 0%;
+}
+
+.circulos .circulo2 .path {
+  fill: rgb(111, 0, 155);
+}
+
+.circulos .circulo3 {
+  bottom: 0%;
+  right: 0%;
+}
+
+.circulos .circulo3 .path {
+  fill: rgb(0, 59, 155);
+}
+
+.circulos .circulo4 {
+  bottom: 0%;
+  left: 0%;
+}
+
+.circulos .circulo4 .path {
+  fill: rgb(165, 127, 1);
+}
+
 .header {
   width: 100%;
   min-height: 5em;
@@ -143,14 +201,16 @@ select {
 }
 
 .main {
-  background-color: lightgray;
+  background: rgba(0, 0, 0, 0.7);
+  margin: 0 0 1em;
   margin: 1em 0;
+  position: relative;
+  z-index: 2;
 }
 
 .section {
   width: 100%;
   min-height: 88vh;
-  background-color: lightskyblue;
   margin: 1em 0;
   padding: 2em;
   text-align: center;
@@ -171,6 +231,8 @@ select {
 
 .section .info {
   font-size: 1.2em;
+  -webkit-animation: aparecer1 2s ease 1 both;
+          animation: aparecer1 2s ease 1 both;
 }
 
 .section .ul {
@@ -195,7 +257,7 @@ select {
 }
 
 .section .ul .a {
-  border: 2px solid rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.2);
   border-radius: 50%;
   padding: 1em 1em 1em;
   text-transform: uppercase;
@@ -205,14 +267,15 @@ select {
 }
 
 .section .ul .a:hover {
-  border-color: black;
+  border-color: rgb(250, 247, 247);
 }
 
 .section .h2 {
   font-family: var(--tipo-titular);
-  font-weight: 800;
+  font-weight: 600;
   font-size: 5em;
   line-height: 1em;
+  color: white;
 }
 
 .section .h3 {
@@ -224,7 +287,6 @@ select {
   width: 90%;
   max-width: 40em;
   margin: 1em 0;
-  background-color: lightcoral;
   display: -ms-grid;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
@@ -234,7 +296,7 @@ select {
 .section .article {
   width: 100%;
   min-height: 30vh;
-  background-color: lightgoldenrodyellow;
+  background: lightgoldenrodyellow;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -249,6 +311,8 @@ select {
       -ms-flex-align: center;
           align-items: center;
   position: relative;
+  overflow: hidden;
+  border-radius: 1em;
 }
 
 .section .figure {
@@ -261,14 +325,12 @@ select {
   background-color: limegreen;
 }
 
-.works .h2 {
-  margin: 0 0 1rem;
-}
-
 .section .h4 {
   width: 100%;
-  height: 50%;
-  background-color: coral;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  -webkit-backdrop-filter: blur(1rem);
+          backdrop-filter: blur(1rem);
   position: absolute;
   bottom: 0;
   left: 0;
@@ -285,21 +347,44 @@ select {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  color: white;
+  font-size: 1.8em;
+  font-family: var(--tipo-titular);
+  font-style: italic;
+  opacity: 0;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  -webkit-transform: translateZ(1) scale(1.5);
+          transform: translateZ(1) scale(1.5);
+}
+
+.section .article:hover .h4 {
+  opacity: 1;
+  -webkit-transform: translateZ(1) scale(1);
+          transform: translateZ(1) scale(1);
+}
+
+.works {
+  color: white;
+}
+
+.works .h2 {
+  color: inherit;
+  margin: 0 0 1rem;
 }
 
 .about .h2 {
-  margin: 0 0 1rem;
+  margin: 0 0 2rem;
 }
 
 .about .p {
-  max-width: 40em;
-  background-color: lightgreen;
+  max-width: 40rem;
+  margin: 0 0 2rem;
+  font-size: 1.1em;
   text-align: left;
-  margin: 0 0 1rem;
 }
 
 .about .rrss {
-  background-color: lightgreen;
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -318,17 +403,63 @@ select {
 
 .about .li {
   margin: 0 1em;
-  background-color: orange;
 }
 
 .about .svg {
   width: 3em;
   height: 3em;
-  background-color: rgb(206, 33, 33);
 }
 
 .footer {
-  background-color: lightpink;
   padding: 2em 0;
   text-align: center;
+  color: white;
+  z-index: 2;
+  position: relative;
+}
+
+@-webkit-keyframes circulo1 {
+  from {
+    -webkit-transform: rotate(0deg) scale(3);
+            transform: rotate(0deg) scale(3);
+  }
+  to {
+    -webkit-transform: rotate(3600deg) scale(3);
+            transform: rotate(3600deg) scale(3);
+  }
+}
+
+@keyframes circulo1 {
+  from {
+    -webkit-transform: rotate(0deg) scale(3);
+            transform: rotate(0deg) scale(3);
+  }
+  to {
+    -webkit-transform: rotate(3600deg) scale(3);
+            transform: rotate(3600deg) scale(3);
+  }
+}
+@-webkit-keyframes aparecer1 {
+  from {
+    opacity: 0;
+    -webkit-transform: translateY(50%);
+            transform: translateY(50%);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translateY(0%);
+            transform: translateY(0%);
+  }
+}
+@keyframes aparecer1 {
+  from {
+    opacity: 0;
+    -webkit-transform: translateY(50%);
+            transform: translateY(50%);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translateY(0%);
+            transform: translateY(0%);
+  }
 }

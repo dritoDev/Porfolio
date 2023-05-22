@@ -32,8 +32,9 @@ body {
   font-family: 'Courier New', Courier, monospace;
   font-size: 100%;
   min-height: 100vh;
+  background-color: #0f0e0e;
+  color: white;
   font-smooth: always;
-  background-color: white;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 
@@ -91,3 +92,4 @@ select {
   display: flex;
   color: inherit;
 }
+
