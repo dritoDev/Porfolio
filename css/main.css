@@ -1,9 +1,14 @@
 :root {
   --color-claro:white;
   --color-oscuro:black;
-  --color-oscuro-7:rgba(0,0,0.75);
+  --color-oscuro-5:rgba(0,0,0,0.5);
+  --color-oscuro-7:rgba(0,0,0,0.75);
   --tipo-titular:"Playfair", serif;
   --tipo-principal:"Inter", sans-serif;
+  --path-gb-verde: rgb(2, 95, 25);
+  --path-gb-purpura: rgb(65, 9, 87);
+  --path-gb-azul: rgb(0, 59, 155);
+  --path-gb-amarillo: rgb(185, 122, 5);
 }
 
 * {
@@ -129,7 +134,7 @@ body {
 }
 
 .circulos .circulo1 .path {
-  fill: rgb(5, 126, 35);
+  fill: var(--path-gb-verde);
 }
 
 .circulos .circulo2 {
@@ -138,7 +143,7 @@ body {
 }
 
 .circulos .circulo2 .path {
-  fill: rgb(111, 0, 155);
+  fill: var(--path-gb-purpura);
 }
 
 .circulos .circulo3 {
@@ -147,7 +152,7 @@ body {
 }
 
 .circulos .circulo3 .path {
-  fill: rgb(0, 59, 155);
+  fill: var(--path-gb-azul);
 }
 
 .circulos .circulo4 {
@@ -156,7 +161,7 @@ body {
 }
 
 .circulos .circulo4 .path {
-  fill: rgb(165, 127, 1);
+  fill: var(--path-gb-amarillo);
 }
 
 .header {
@@ -201,9 +206,9 @@ body {
 }
 
 .main {
-  background: rgba(0, 0, 0, 0.7);
+  background: var(--color-oscuro-7);
   margin: 0 0 1em;
-  margin: 1em 0;
+  text-align: center;
   position: relative;
   z-index: 2;
 }
@@ -283,7 +288,7 @@ body {
 }
 
 .section .ul .a:hover {
-  border-color: rgb(250, 247, 247);
+  border-color: var(--color-claro);
 }
 
 .section .h2 {
@@ -291,7 +296,7 @@ body {
   font-weight: 600;
   font-size: 5em;
   line-height: 1em;
-  color: white;
+  color: var(--color-claro);
 }
 
 .section .h3 {
@@ -312,7 +317,7 @@ body {
 .section .article {
   width: 100%;
   min-height: 30vh;
-  background: lightgoldenrodyellow;
+  background: var(--color-claro);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -333,7 +338,6 @@ body {
 
 .section .figure {
   width: 100%;
-  background-color: red;
 }
 
 .section .img {
@@ -344,7 +348,7 @@ body {
 .section .h4 {
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: var(--color-oscuro-5);
   -webkit-backdrop-filter: blur(1rem);
           backdrop-filter: blur(1rem);
   position: absolute;
@@ -363,7 +367,7 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  color: white;
+  color: var(--color-claro);
   font-size: 1.8em;
   font-family: var(--tipo-titular);
   font-style: italic;
@@ -381,7 +385,7 @@ body {
 }
 
 .works {
-  color: white;
+  color: var(--color-claro);
 }
 
 .works .h2 {
@@ -430,7 +434,7 @@ body {
 .footer {
   padding: 2em 0;
   text-align: center;
-  color: white;
+  color: var(--color-claro);
   z-index: 2;
   position: relative;
 }
@@ -484,7 +488,7 @@ body {
   width: 5em;
   height: 5em;
   position: fixed;
-  background-color: rgb(250, 250, 250);
+  background-color: var(--color-claro);
   inset: 0;
   z-index: 3;
   pointer-events: none;
