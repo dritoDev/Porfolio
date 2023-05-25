@@ -415,7 +415,7 @@ body {
   mix-blend-mode: difference;
 }
 
-#cursor.mini {
+#cursor .mini {
   transform: scale(0.7);
-  transition: all .5s ease;
+  transition: all .5s linear;
 }
