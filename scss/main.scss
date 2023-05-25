@@ -5,10 +5,10 @@
   --color-oscuro-7: rgba(0, 0, 0, .75);
   --tipo-titular: 'Playfair', serif;
   --tipo-principal: 'Inter', sans-serif;
-  --path-gb-verde: rgb(2, 95, 25);
-  --path-gb-purpura: rgb(65, 9, 87);
-  --path-gb-azul: rgb(0, 59, 155);
-  --path-gb-amarillo: rgb(185, 122, 5);
+  --path-gb-verde: rgb(3, 201, 136);
+  --path-gb-purpura: rgb(119, 3, 123);
+  --path-gb-azul: rgb(29, 38, 125);
+  --path-gb-amarillo: rgb(255, 217, 90);
 
 }
 
@@ -114,7 +114,7 @@ body {
   left: 0;
   z-index: 1;
   filter: blur(40px);
-  animation: circulo1 200s linear infinite both;
+  animation: circulo1 300s linear infinite both;
 
 }
 
@@ -123,7 +123,7 @@ body {
   width: 50%;
   height: 50%;
 
-  animation: circulo1 200s linear infinite both;
+  animation: circulo1 300s linear infinite both;
 }
 
 .circulos .circulo1 {
@@ -201,9 +201,9 @@ body {
 .section {
   width: 100%;
   min-height: 88vh;
-  margin: 1em 0;
+  margin: 0 0 1em;
   padding: 2em;
-  text-align: center;
+  text-align: center0;
 
   display: flex;
   flex-flow: column wrap;
