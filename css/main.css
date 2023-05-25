@@ -1,16 +1,24 @@
 :root {
-  --color-claro:white;
-  --color-oscuro:black;
-  --color-oscuro-5:rgba(0,0,0,0.5);
-  --color-oscuro-7:rgba(0,0,0,0.75);
-  --tipo-titular:"Playfair", serif;
-  --tipo-principal:"Inter", sans-serif;
+  --color-claro: white;
+  --color-oscuro: black;
+  --color-oscuro-5: rgba(0, 0, 0, .5);
+  --color-oscuro-7: rgba(0, 0, 0, .75);
+  --tipo-titular: "Playfair", serif;
+  --tipo-principal: "Inter", sans-serif;
   --path-gb-verde: rgb(2, 95, 25);
   --path-gb-purpura: rgb(65, 9, 87);
   --path-gb-azul: rgb(0, 59, 155);
   --path-gb-amarillo: rgb(185, 122, 5);
 }
 
+@media screen and (prefers-color-scheme: light) {
+  :root {
+    --color-claro: black;
+    --color-oscuro: white;
+    --color-oscuro-5: rgba(255, 255, 255, 0.5);
+    --color-oscuro-7: rgba(255, 255, 255, 0.75);
+  }
+}
 * {
   margin: 0;
   padding: 0;
@@ -116,16 +124,16 @@ body {
   z-index: 1;
   -webkit-filter: blur(40px);
           filter: blur(40px);
-  -webkit-animation: circulo1 50s linear infinite both;
-          animation: circulo1 50s linear infinite both;
+  -webkit-animation: circulo1 200s linear infinite both;
+          animation: circulo1 200s linear infinite both;
 }
 
 .circulos .circulo {
   position: absolute;
   width: 50%;
   height: 50%;
-  -webkit-animation: circulo1 50s linear infinite both;
-          animation: circulo1 50s linear infinite both;
+  -webkit-animation: circulo1 200s linear infinite both;
+          animation: circulo1 200s linear infinite both;
 }
 
 .circulos .circulo1 {
@@ -167,7 +175,6 @@ body {
 .header {
   width: 100%;
   min-height: 5em;
-  background-color: lightgreen;
   padding: 1em 2em;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -241,10 +248,10 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
+  -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-flow: row wrap;
-          flex-flow: row wrap;
+      -ms-flex-flow: column wrap;
+          flex-flow: column wrap;
 }
 
 .section .ul {
@@ -283,8 +290,8 @@ body {
 }
 
 .section .ul > :nth-child(2) .a {
-  -webkit-animation-delay: 1s;
-          animation-delay: 1s;
+  -webkit-animation-delay: 0.2s;
+          animation-delay: 0.2s;
 }
 
 .section .ul .a:hover {
@@ -342,7 +349,6 @@ body {
 
 .section .img {
   width: 100%;
-  background-color: limegreen;
 }
 
 .section .h4 {
@@ -496,9 +502,9 @@ body {
   mix-blend-mode: difference;
 }
 
-#cursor.mini {
+#cursor .mini {
   -webkit-transform: scale(0.7);
           transform: scale(0.7);
-  -webkit-transition: all 0.5s ease;
-  transition: all 0.5s ease;
+  -webkit-transition: all 0.1s linear;
+  transition: all 0.1s linear;
 }
