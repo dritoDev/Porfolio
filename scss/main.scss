@@ -173,12 +173,6 @@ body {
   display: none;
 }
 
-.header .h1 {}
-
-.header .h1 .a {}
-
-.header .nav {}
-
 .header .ul {
   display: flex;
   flex-flow: row wrap;
@@ -189,8 +183,6 @@ body {
 .header .li {
   margin: 0 1em;
 }
-
-.header .li .a {}
 
 .main {
   background: var(--color-oscuro-7);
@@ -267,8 +259,6 @@ body {
   font-family: var(--tipo-titular);
   font-size: 4.3em;
 }
-
-.section .p {}
 
 .section .grid {
   width: 90%;
