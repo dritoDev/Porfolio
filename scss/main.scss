@@ -11,7 +11,12 @@
   --path-gb-amarillo: rgb(185, 122, 5);
 
 }
-
+@media screen and (prefers-color-scheme:light){
+  --color-claro:black;
+  --color-oscuro:white;
+  --color-oscuro-5:rgba(255,255,255,0.5);
+  --color-oscuro-7:rgba(255,255,255,0.75);
+}
 
 * {
   margin: 0;
