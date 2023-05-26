@@ -107,7 +107,7 @@ body {
   font-family: var(--tipo-titular);
   font-size: 100%;
   min-height: 100vh;
-  background-color: rgb(0, 0, 0);
+  background-color: var(--color-oscuro-5);
   color: white;
   font-smooth: alweys;
   -weg-font-smoothing: antialiased;
