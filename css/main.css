@@ -214,7 +214,7 @@ body {
 
 .main {
   background: var(--color-oscuro-7);
-  margin: 0 0 1em;
+  margin: 1em 0;
   text-align: center;
   position: relative;
   z-index: 2;
@@ -223,7 +223,7 @@ body {
 .section {
   width: 100%;
   min-height: 88vh;
-  margin: 0 0 1em;
+  margin: 1em 0;
   padding: 2em;
   text-align: center0;
   display: -webkit-box;
@@ -239,6 +239,7 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  background-color: red;
 }
 
 .section .info {
@@ -248,10 +249,11 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  width: 100%;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-flow: column wrap;
-          flex-flow: column wrap;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
 }
 
 .section .ul {
@@ -312,7 +314,7 @@ body {
 }
 
 .section .grid {
-  width: 90%;
+  width: 100%;
   max-width: 40em;
   margin: 1em 0;
   display: -ms-grid;

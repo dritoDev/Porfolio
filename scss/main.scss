@@ -192,7 +192,7 @@ body {
 
 .main {
   background: var(--color-oscuro-7);
-  margin: 0 0 1em;
+  margin: 1em 0;
   text-align: center;
   position: relative;
   z-index: 2;
@@ -201,7 +201,7 @@ body {
 .section {
   width: 100%;
   min-height: 88vh;
-  margin: 0 0 1em;
+  margin: 1em 0;
   padding: 2em;
   text-align: center0;
 
@@ -209,13 +209,15 @@ body {
   flex-flow: column wrap;
   justify-content: center;
   align-items: center;
+  background-color: red;
 }
 
 .section .info {
   font-size: 1.2em;
   animation: aparecer1 2s ease 1 both;
   display: flex;
-  flex-flow: column wrap;
+  width: 100%;
+  flex-flow: column nowrap;
 }
 
 .section .ul {
@@ -267,7 +269,7 @@ body {
 }
 
 .section .grid {
-  width: 90%;
+  width: 100%;
   max-width: 40em;
   margin: 1em 0;
   display: grid;
