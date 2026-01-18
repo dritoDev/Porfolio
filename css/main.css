@@ -486,7 +486,7 @@ body {
             transform: translateY(0%);
   }
 }
-#cursor {
+/* #cursor {
   width: 5em;
   height: 5em;
   position: fixed;
@@ -501,4 +501,4 @@ body {
 #cursor .mini {
   -webkit-transform: scale(0.7);
           transform: scale(0.7);
-}
+} */
