@@ -486,19 +486,3 @@ body {
             transform: translateY(0%);
   }
 }
-/* #cursor {
-  width: 5em;
-  height: 5em;
-  position: fixed;
-  background-color: var(--claro);
-  inset: 0;
-  z-index: 3;
-  pointer-events: none;
-  border-radius: 20.356em;
-  mix-blend-mode: difference;
-}
-
-#cursor .mini {
-  -webkit-transform: scale(0.7);
-          transform: scale(0.7);
-} */
